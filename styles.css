@@ -1,0 +1,132 @@
+
+
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    background-color: grey;
+    /* background-color: rgb(33,31,35); */
+}
+
+.nav {
+    display: flex;
+    align-items: end;
+    background-color: blanchedalmond;
+    position: auto;
+    padding: 20px;
+
+}
+
+.main {
+padding-top: 400px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238,122,54);
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+.card1, .card2, .card3, .card4, .card5  {
+
+    border: 2px solid #5d4e65;   
+  
+    min-height: 400px;
+  
+    padding-top: 150px;
+  
+    position: relative;
+  
+    text-align: center;
+  
+    transition: all .2s ease-in-out;
+}
+
+ .card1:hover {
+
+    background-color: rgb(83,69,91);
+  
+    border-top: 2px solid #ec7a37;
+  
+    border-bottom: 2px solid #ff4f69;
+  
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+
+}
+.card2:hover {
+
+    background-color: rgb(83,69,91);
+  
+    border-top: 2px solid #ec7a37;
+  
+    border-bottom: 2px solid #ff4f69;
+  
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+}
+    .card3:hover {
+
+        background-color: rgb(83,69,91);
+      
+        border-top: 2px solid #ec7a37;
+      
+        border-bottom: 2px solid #ff4f69;
+      
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+    
+    }
+    .card4:hover {
+
+        background-color: rgb(83,69,91);
+      
+        border-top: 2px solid #ec7a37;
+      
+        border-bottom: 2px solid #ff4f69;
+      
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+    
+    }
+    .card5:hover {
+
+        background-color: rgb(83,69,91);
+      
+        border-top: 2px solid #ec7a37;
+      
+        border-bottom: 2px solid #ff4f69;
+      
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
+    
+    }
+
+
+
+h2, h3, p, ul {
+    margin: 0%;
+    font-weight: bold;
+}
+
+ul  {
+    color: #796583;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+   
+    text-align: center;
+    padding-right: 100px;
+    align-items: center;
+    font-weight: bold;
+    background-color: #9c83aa;
+    border-radius: 20px;
+    width: 120px;
+    color: #fff;
+}
+/* @media screen and (min-width: 1120px); */
