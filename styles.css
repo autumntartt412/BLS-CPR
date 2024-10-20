@@ -6,16 +6,17 @@ html {
     height: 100%;
 }
 body {
-    background-color: grey;
+    background-color: #3A6EA5;
     /* background-color: rgb(33,31,35); */
 }
 
-.nav {
+#nav {
     display: flex;
     align-items: end;
-    background-color: blanchedalmond;
+    background-color: #004e98;
     position: auto;
     padding: 20px;
+    /* text-decoration: white; */
 
 }
 
@@ -23,89 +24,36 @@ body {
 padding-top: 400px;
 }
 
-.container {
+#cardContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(238,122,54);
+    /* background-color: rgb(238,122,54); */
+    background-color: #abc4ff;
     margin: auto;
     width: 90%;
     max-width: 1200px;
 }
 
 
-.card1, .card2, .card3, .card4, .card5  {
-
-    border: 2px solid #5d4e65;   
-  
-    min-height: 400px;
-  
-    padding-top: 150px;
-  
-    position: relative;
-  
-    text-align: center;
-  
-    transition: all .2s ease-in-out;
+.cards  {
+     border: 10px solid #ec7a37;   
+     min-height: 200px;
+     padding-top: 75px; 
+     position: relative;
+     text-align: center;
+     transition: all .2s ease-in-out;
 }
 
- .card1:hover {
-
-    background-color: rgb(83,69,91);
-  
-    border-top: 2px solid #ec7a37;
-  
-    border-bottom: 2px solid #ff4f69;
-  
+ .cards:hover {
+    background-color: #004398;
+    border-top: 5px solid #ec7a37;
+    border-bottom: 5px solid #ec7a37;
+    border-right: 5px solid #ec7a37;
+    border-left: 5px solid #ec7a37;
     box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
 
 }
-.card2:hover {
-
-    background-color: rgb(83,69,91);
-  
-    border-top: 2px solid #ec7a37;
-  
-    border-bottom: 2px solid #ff4f69;
-  
-    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
-}
-    .card3:hover {
-
-        background-color: rgb(83,69,91);
-      
-        border-top: 2px solid #ec7a37;
-      
-        border-bottom: 2px solid #ff4f69;
-      
-        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
-    
-    }
-    .card4:hover {
-
-        background-color: rgb(83,69,91);
-      
-        border-top: 2px solid #ec7a37;
-      
-        border-bottom: 2px solid #ff4f69;
-      
-        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
-    
-    }
-    .card5:hover {
-
-        background-color: rgb(83,69,91);
-      
-        border-top: 2px solid #ec7a37;
-      
-        border-bottom: 2px solid #ff4f69;
-      
-        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 1);
-    
-    }
-
-
-
 h2, h3, p, ul {
     margin: 0%;
     font-weight: bold;
@@ -115,16 +63,17 @@ ul  {
     color: #796583;
 }
 
+:root {
+    --text-color: #ec7a37;
+}
 
 .button {
     display: flex;
     justify-content: center;
-   
     text-align: center;
-    padding-right: 100px;
     align-items: center;
     font-weight: bold;
-    background-color: #9c83aa;
+    background-color: #ec7a37;
     border-radius: 20px;
     width: 120px;
     color: #fff;

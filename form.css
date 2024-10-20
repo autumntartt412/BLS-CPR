@@ -1,0 +1,53 @@
+body {
+border: 10px solid  #004e98;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#form-container {
+    border: 5px solid red;
+    display: flex;
+    justify-content: center;
+    
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    width: 1350px;
+    height: 100px;
+    padding-right: 75px;
+    padding-left: 60px;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 50px;
+    padding-right: 25px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+h1, h2, p {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#daytime-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    text-decoration: #004e98;
+     
+}
+

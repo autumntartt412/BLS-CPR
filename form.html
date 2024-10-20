@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Form</title>
+ 
+</head>
+<body>
+  <div class="container">
+      <div>
+        <h1>Welcome! Fill out the form to apply for the training courses. </h1>
+        <h2>You can consider your application accepted after you receive a confirmation email.</h2>
+        <p>Sign Up Form</p>
+
+        <div id="form-container">
+        <form id="sign-up">
+          <input name="firstname" type="text" placeholder="First name" />
+          <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+
+          <input name="lastname" type="text" placeholder="Last name" />
+          <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+
+          <input name="email" type="text" placeholder="Email" />
+          <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
+          ><br />
+
+          
+
+          <div id="emessage"></div> 
+        </div>
+   <br>
+            <div id="daytime-container">
+          <div class="flex-row">
+            <input id="morning" name="morning" type="radio" value="morning" />
+            <label for="daytime"
+              >7a-10a&nbsp;</label
+            >
+          </div>
+            <div class="flex-row">
+              <input id="afternoon" name="afternoon" type="radio" value="afternoon" />
+              <label for="afternoon"
+                >12p-3p&nbsp;</label
+              >
+              
+            </div>
+            <div class="flex-row">
+                <input id="evening" name="evening" type="radio" value="evening" />
+                <label for="evening"
+                  >5p-8p&nbsp;</label
+                >
+              </div>
+              </div>
+                <br>
+                <div id="submit">
+            <input type="submit" value="sign up" style color: #004e98 />
+           
+          </div>
+          </div>
+        </form> 
+      <div id="emessage"></div>  
+      </div>
+
+     
+       
+        <script src="form.js"></script>
+</body>
+</html>
