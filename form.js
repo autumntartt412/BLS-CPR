@@ -5,6 +5,7 @@
     const emailMinlength = 3;
     const emailMaxlength = 30;
     const emailReg = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
+    const emailPattern = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/;';
 
     //first name
 function  isFirstNameValidLength(firstname) {
@@ -79,11 +80,17 @@ function  isEmailValidLength(email) {
     }else {
         if (email = !isEmailValidLength.length) 
     return false;
+    }
         console.log(eMessage(`Your email must be greater than ${emailMinLength} and less than ${emailMaxLength} characters long., e`));  
 
-}};
+};
 
-
+function validatePattern(email) {
+if (email == !validatePattern) {
+    return false;
+}
+console.log(eMessage('Please enter a valid email., e'))
+};
 
 
 

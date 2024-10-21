@@ -1,5 +1,9 @@
 body {
-border: 10px solid  #004e98;
+ background: 275px url(https://static.vecteezy.com/system/resources/previews/003/782/176/non_2x/heart-rate-icon-illustration-cartoon-style-icon-vector.jpg) ;  
+        /* background: url(sweettexture.jpg); */
+      
+      
+border: 50px solid  #004e98;
 }
 
 #container {
@@ -35,7 +39,9 @@ label {
 h1, h2, p {
     display: flex;
     justify-content: center;
-    font-weight: bold;
+    /* font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(209, 18, 18, 0.852); */
+    text-shadow: 2px 2px 4px rgb(221, 215, 215);
 }
 
 #daytime-container {
@@ -47,7 +53,10 @@ h1, h2, p {
 #submit {
     display: flex;
     justify-content: center;
-    text-decoration: #004e98;
      
 }
 
+#form {
+    display: flex;
+    flex-direction: column;
+}
