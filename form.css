@@ -1,9 +1,7 @@
 body {
- background: 275px url(https://static.vecteezy.com/system/resources/previews/003/782/176/non_2x/heart-rate-icon-illustration-cartoon-style-icon-vector.jpg) ;  
-        /* background: url(sweettexture.jpg); */
-      
-      
-border: 50px solid  #004e98;
+    background: 275px url(https://static.vecteezy.com/system/resources/previews/003/782/176/non_2x/heart-rate-icon-illustration-cartoon-style-icon-vector.jpg) ;       
+    border: 50px solid  #004e98;
+    height: 800px;
 }
 
 #container {
@@ -45,6 +43,7 @@ h1, h2, p {
 }
 
 #daytime-container {
+    padding-top: 210px;
     display: flex;
     justify-content: center;
     
