@@ -68,7 +68,9 @@ img {
 #submit {
     display: flex;
     justify-content: center;
-
+    background-color: #004e98;
+    padding-bottom: 8px;
+    padding-top: 10px;
 }
 
 #form {
@@ -82,7 +84,7 @@ img {
 }
 
 .cards {
-    border: 10px solid red;
+    border: 7px solid red;
     padding-top: 75px;
     position: relative;
     text-align: center;

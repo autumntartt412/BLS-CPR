@@ -60,6 +60,11 @@ for (let i = 0; i < 2; 1++) {
     ul.appendChild.createElement('li')
 };
 
+function showAlert(alert) {
+    errorAlert = "";
+}
+ 
+
 
 function errorMessage(eMessage, e) {
     document.getElementById('message').textContent = eMessage;
