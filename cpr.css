@@ -1,23 +1,62 @@
 
+div#line1 span#a {
+    display: inline;
+  }
+  
+  div#line1:hover span#a {
+    display: none;
+  }
+  
+  div#line1 span#b {
+    display: none;
+  }
+  
+  div#line1:hover span#b {
+    display: inline;
+  }
 
 
-html {
+
+#box {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 5px solid black;
+    }
+
+/* html {
     box-sizing: border-box;
     height: 100%;
+} */
+/* body {
+    border: solid 5px blue;
 }
-body {
-    background-color: #3A6EA5;
-    /* background-color: rgb(33,31,35); */
-}
+
+#container { border: 5px solid orange;
+    background-color: #3A6EA5; */
+ /* width: 1500px;
+
+
 
 #nav {
     display: flex;
     align-items: end;
     background-color: #004e98;
     position: auto;
-    padding: 20px;
+    padding-bottom: 100px;
     /* text-decoration: white; */
-
+  
+#gify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding-right: 100px;
+/* border:  #ec7a37; */
+/* height: 100px;
+width: 1200px; */
 }
 
 .main {
@@ -29,16 +68,16 @@ padding-top: 400px;
     justify-content: center;
     align-items: center;
     /* background-color: rgb(238,122,54); */
-    background-color: #abc4ff;
-    margin: auto;
-    width: 90%;
-    max-width: 1200px;
+    /* background-color: #abc4ff; */
+    /* margin: auto; */
+    /* width: 90%;
+    max-width: 1200px; */
 }
 
 
 .cards  {
      border: 10px solid #ec7a37;   
-     min-height: 200px;
+     /* min-height: 200px; */
      padding-top: 75px; 
      position: relative;
      text-align: center;
@@ -60,11 +99,12 @@ h2, h3, p, ul {
 }
 
 ul  {
-    color: #796583;
+    color: #ec7a37;
+    font-weight: bolder;
 }
 
 :root {
-    --text-color: #ec7a37;
+    --text-color: red;
 }
 
 .button {

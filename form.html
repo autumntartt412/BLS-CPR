@@ -1,69 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="form.css">
   <title>Form</title>
- 
+
 </head>
+
 <body>
-  <div class="container">
+
+  <img
+    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnlqOWR2Ym9rMDg5aXZqZXlqeWNmMDdxc2RiaGJpZHcxcW5kaWl6cSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dwHeUXh2jGcWwCBt1m/200.webp"
+    alt="gify I can save a life banner">
+
+  <div id="emessage"></div>
+  <div id="main">
+    <div class="container">
       <div>
-        <h1>Welcome! Fill out the form to apply for the training courses. </h1>
-        <h2>You can consider your application accepted after you receive a confirmation email.</h2>
-        <p>Sign Up Form</p>
+        <h1>Welcome! Please fill out the form to apply for the training courses. </h1>
+        <h2>Don't Be Trife. Help Save a Life.</h2>
+        <!-- <p>Sign Up Form</p> -->
 
         <div id="form-container">
-        <form id="form">
-          <input name="firstname" type="text" placeholder="First name" />
-          <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+          <form id="form" style border: blue>
+            <input name="firstname" type="text" placeholder="First name" />
+            <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="lastname" type="text" placeholder="Last name" />
-          <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+            <input name="lastname" type="text" placeholder="Last name" />
+            <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
-          <input name="email" type="text" placeholder="www.example.com" />
-          <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
-          ><br />
+            <input name="email" type="text" placeholder="www.example.com" />
+            <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
 
-          
 
-          <div id="emessage"></div> 
+            <div id="line1">
+
+              <h1 id="a">AH, AH, AH, AH</h1>
+              <h1 id="b">STAYIN ALIVE, STAYIN ALIVE</h1>
+
+            </div>
+
+
+            <div id="emessage"></div>
         </div>
-   <br>
-            <div id="daytime-container">
+        <br>
+        <div id="daytime-container">
           <div class="flex-row">
             <input id="morning" name="morning" type="radio" value="morning" />
-            <label for="daytime"
-              >7a-10a&nbsp;</label
-            >
+            <label for="daytime">7a-10a&nbsp;</label>
           </div>
-            <div class="flex-row">
-              <input id="afternoon" name="afternoon" type="radio" value="afternoon" />
-              <label for="afternoon"
-                >12p-3p&nbsp;</label
-              >
-              
-            </div>
-            <div class="flex-row">
-                <input id="evening" name="evening" type="radio" value="evening" />
-                <label for="evening"
-                  >5p-8p&nbsp;</label
-                >
-              </div>
-              </div>
-                <br>
-                <div id="submit">
-            <input type="submit" value="sign up" style color: #004e98 />
-           
-          </div>
-          </div>
-        </form> 
-      <div id="emessage"></div>  
-      </div>
+          <div class="flex-row">
+            <input id="afternoon" name="afternoon" type="radio" value="afternoon" />
+            <label for="afternoon">12p-3p&nbsp;</label>
 
-     
-       
-        <script src="form.js"></script>
+          </div>
+          <div class="flex-row">
+            <input id="evening" name="evening" type="radio" value="evening" />
+            <label for="evening">5p-8p&nbsp;</label>
+          </div>
+        </div>
+        <br>
+
+        <div id="submit">
+          <input type="submit" value="sign up" />
+
+        </div>
+      </div>
+      </form>
+      <div id="message"></div>
+    </div>
+
+    <div id="cardcontainer">
+      <div class="cards">
+        <h2>PGH BLS & CPR</h2>
+        <h3><span class="uppercase">Get Certified Now</span></h3>
+        <span id="a">Save A Life</span><span id="b">Get Certified Now</span>
+        <p>AHA BLS CPR/AED & First Aid Classes</p>
+        <ul class="pricelist">
+          <li>BLS - $150</li>
+          <!-- <li>First Aid - $50</li> -->
+        </ul>
+        <a href="file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?username=&email=&password=#"
+          class="button">Sign Up Now</a>
+      </div>
+      <div class="cards">
+        <h2>PGH BLS & CPR</h2>
+        <h3><span class="uppercase">Get Certified Now</span></h3>
+        <p>Save A Life</p>
+        <p>AHA BLS CPR/AED & First Aid Classes</p>
+        <ul class="pricelist">
+          <li>Adult CPR/AED - $75</li>
+          <!-- <li>First Aid - $50</li> -->
+        </ul>
+        <a href="file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?username=&email=&password=#"
+          class="button">Sign Up Now</a>
+      </div>
+      <div class="cards">
+        <h2>PGH BLS & CPR</h2>
+        <h3><span class="uppercase">Get Certified Now</span></h3>
+        <p>Save A Life</p>
+        <p>AHA BLS CPR/AED & First Aid Classes</p>
+        <ul class="pricelist">
+          <li>Adult/Child CPR/AED - $100</li>
+          <!-- <li>First Aid - $50</li> -->
+        </ul>
+        <a href="file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?username=&email=&password=#"
+          class="button">Sign Up Now</a>
+      </div>
+      <div class="cards">
+        <h2>PGH BLS & CPR</h2>
+        <h3><span class="uppercase">Get Certified Now</span></h3>
+        <p>Save A Life</p>
+        <p>AHA BLS CPR/AED & First Aid Classes</p>
+        <ul class="pricelist">
+
+          <li>Infant CPR/AED - $50</li>
+          <!-- <li>First Aid - $50</li> -->
+        </ul>
+        <a href="file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?username=&email=&password=#"
+          class="button">Sign Up Now</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    const priceList = document.getElementById('pricelist');
+    let newPriceListItem = document.createElement('li');
+    newPriceListItem.textContent = "First Aid - $50";
+    priceList.appendChild(newPriceListItem);
+  </script>
+
+
+  <!-- <script src="/form.js" type="module"></script> -->
 </body>
+
 </html>
