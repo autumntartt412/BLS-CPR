@@ -1,13 +1,14 @@
-import "./form.css";
+import "form.css";
 
+ 
 const minlength = 1;
 const maxlength = 50;
-const nameReg = '/^[a-zA-Z\s]+$/';
+const nameReg = /^[a-zA-Z\s]+$/;
 const emailMinlength = 3;
 const emailMaxlength = 30;
-const emailReg = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
-const emailPattern = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/;';
-const form = document.getElementsById('form');
+const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const form = document.getElementById('form');
 const firstName = form.elements['firstname'];
 const lastName = form.elements['lastname'];
 const email = form.elements['email'];
@@ -18,7 +19,7 @@ const email = form.elements['email'];
 
 const cardContainerEl = document.selectElementById('cardcontainer');
 cardContainerEl.style.height = '50%';
-cardContainerEl.width = '50%';
+cardContainerEl.style.width = '50%';
 
 
 const navEl = document.selectElementById('nav');
@@ -26,7 +27,7 @@ navEl.style.border = '5px white';
 navEl.classList.add('flex-around');
 navEl.style.textContent = 'white';
 
-const priceCards = document.querySelectorAll('cards');
+const priceCards = document.querySelectorAll('.cards');
 priceCards.style.width = '100px';
 priceCards.style.border = 'var(--text-color)';
 
@@ -56,143 +57,207 @@ const ul = document.li;
 appendChild(document.createElement('div'));
 appendChild(document.createElement('ul'));
 
-for (let i = 0; i < 2; 1++) {
+for (let i = 0; i < 2; i++) {
     ul.appendChild.createElement('li')
 };
 
-function showAlert(alert) {
-    errorAlert = "";
-}
+// function showAlert(alert) {
+//     errorAlert = "";
+// }
  
 
 
-function errorMessage(eMessage, e) {
-    document.getElementById('message').textContent = eMessage;
+// error message
+
+const errorDiv = document.getElementById('message');
+function errorMessage(message) {
+    errorMessage.style.display = 'block';
+    errorMessage.textContent = message;
+    
 }
 
+errorMessage(message);
 
-function isFirstNameValidLength(firstname) {
-
-    let firstname = "";
-
-    if (firstname.length >= minlength && firstname.length <= maxlength) {
-        alert('First name is valid!');
-        return true;
-
-    } else {
-        if (firstname == !isFirstNameValidLength.length)
-            alert(`Your first name must be greater than ${minLength} and less than ${maxLength} characters long.`)
-            return false;
-        console.log(eMessage(`Your first name must be greater than ${minLength} and less than ${maxLength} characters long., e`));
-
-    }
+function hideMessage() {
+    errorDiv.style.display = 'none';
 };
+
+
+hideMessage();
+
+setTimeout(hideMessage, 5000);
+
+
+
+
+
+function isFirstNameValidLength(firstname, minLength, maxLength) {
+
+    // let firstname = "";
+
+            if (firstname.length >= minLength && firstname.length <= maxLength) {
+                console.log('First name is valid!');
+                return true;
+            } else {
+                
+                errorMessage(`Your first name must be greater than ${minLength} and less than ${maxLength} characters long.`);
+                return false;
+            }
+        }
+
+    isFirstNameValidLength(""); 
+
 
 
 
 function validFirstName(firstname) {
-    let firstName = "";
-    if (firstname == !nameReg) {
-        alert('Please enter a valid first name.');
+    // let firstName = "";
+
+    if (!nameReg.test(firstname)) {
+        
+    errorMessage('Please enter a valid first name.');
         return false;
     }
-    console.log(eMessage('Please enter a valid first name., e'));
+    return true;
 };
+
+validFirstName("");
+    
 
 function firstNameEmptySpace(firstName) {
     if (firstName === "") {
-        alert('Please enter a valid first name.');
+        message('Please enter a valid first name.');
         return false;
     }
-    console.log(eMessage('Please enter a valid first name., e'));
+    return true;
 };
+
+firstNameEmptySpace("");
+
+
+
 
 
 //last name
-function isLastNameValidLength(lastname) {
-    let lastname = "";
-
-    if (lastname.length >= minlength && lastname.length <= maxlength) {
-        alert('Last name is valid!');
-        return true;
-
-    } else {
-        if (lastname = !isLastNameValidLength.length)
-            alert(`Your last name must be greater than ${minLength} and less than ${maxLength} characters long.`)
-            return false;
-        console.log(eMessage(`Your last name must be greater than ${minLength} and less than ${maxLength} characters long., e`));
-
-    }
-};
-
-function validLastName(lastname) {
-    let lastName = "";
-    if (lastname == !nameReg) {
-        alert('Please enter a valid last name.'); 
+function isLastNameValidLength(lastname, minLength, maxLength) {
+    // let lastname = "";
+    if (lastname.length === 0) {
+        message(`Your last name must be greater than ${minLength} and less than ${maxLength} characters long.`);
         return false;
     }
-    console.log(eMessage('Please enter a valid last name., e'));
+
+    if (lastname.length >= minLength && lastname.length <= maxLength) {
+        message('Last name is valid!');
+        return true;
+    } 
 };
+        
+isLastNameValidLength("");
+
+
+        
+    
+
+
+
+
+
+function validLastName(lastname) {
+    // let lastName = "";
+    if (!nameReg.test(lastname)) {
+        message('Please enter a valid last name.'); 
+        return false;
+    }
+    console.log('Last name is valid!');
+    return true;
+};
+
+validLastName(""); 
 
 
 function lastNameEmptySpace(lastName) {
     if (lastName === "") {
-        alert('Please enter a valid last name.'); 
+        message('Please enter a valid last name.'); 
         return false;
     }
-    console.log(eMessage('Please enter a valid last name., e'));
+    console.log('Last name is valid!');
+    return true;
 };
+
+
+lastNameEmptySpace("");
+    
 
 
 //email
 
-function isEmailValidLength(email) {
-    let email = "";
+function isEmailValidLength(email, emailMinLength, emailMaxLength) {
+    // let email = "";
 
     if (email.length >= emailMinlength && email.length <= emailMaxlength) {
-        alert('Email is valid!');
+        message('Email is valid!');
         return true;
 
     } else {
-        if (email = !isEmailValidLength.length)
-        alert(`Your email must be greater than ${emailMinLength} and less than ${emailMaxLength} characters long.`);
+        if (email.length === 0)
+        message(`Your email must be greater than ${emailMinLength} and less than ${emailMaxLength} characters long.`);
             return false;
     }
-    console.log(eMessage(`Your email must be greater than ${emailMinLength} and less than ${emailMaxLength} characters long., e`));
-
 };
+
+isEmailValidLength("");
+
+
+
+
+
+
+
 
 function validatePattern(email) {
-    if (email == !validatePattern) {
-        alert('Please enter a valid email'); 
+    if (!emailReg.test(email)) {
+        message('Please enter a valid email'); 
         return false;
-    }
-    console.log(eMessage('Please enter a valid email., e'))
+    } else {
+        console.log('Valid email!');
+        return true;
+}
 };
+
+validatePattern("");
+
 
 
 
 function validateEmail(email) {
-    let email = "";
-alert('Please enter a valid email'); 
+    // let email = "";
+
 
     if (!emailReg.test(email)) {
-        alert('Please enter a valid email'); 
+        message('Please enter a valid email'); 
         return false;
     }
-    console.log(eMessage('Please enter a valid email., e'));
+    console.log('Valid email!');
+    return true; 
 };
+
+validateEmail("");
+
+
 
 
 
 function emailEmptySpace(email) {
     if (email === "") {
-        alert('Please enter a valid email'); 
+        message('Please enter a valid email'); 
         return false;
 
     }
-    console.log(eMessage('Please enter a valid email., e'));
+    console.log('Email is valid!');
+    return true;
 }
+
+emailEmptySpace("");
 
 //Submit
 
@@ -202,13 +267,14 @@ function validateCprFormOnSubmit(e) {
     const lastName = lastName.value;
     const email = email.value;
 
+}
 
     form.addEventListener('submit', validateCprFormOnSubmit);
     e.preventDefault('form');
     console.log('form');
     console.log('Sign up button clicked.');
 
-}
+
 validateCprFormOnSubmit();
 
 
@@ -218,6 +284,31 @@ const data = {};
 formData.forEach((value, key) => {
     data[key] = value;
 });
+
+
+let window;
+
+function newWindow() {
+  window = window.open(
+    "file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?firstname=&lastname=&email=",
+    "form",
+    `width=${availW * 0.75}, height=${availH * 0.75}, left=${
+      availW * 0.125
+    }, top=${availH * 0.125}, resizable=yes, scrollbars=yes, location=yes`
+  );
+  window.focus();
+}
+newWindow(window);
+
+function closeWindow() {
+  window.close();
+}
+closeWindow();
+
+document.getElementById("openWindowBtn").addEventListener("click", newWindow);
+document
+  .getElementById("closeWindowBtn")
+  .addEventListener("click", closeWindow);
 
 
 // new price list item

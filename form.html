@@ -1,12 +1,16 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="form.css">
   <title>Form</title>
-
+  <!-- <div id="app"></div> -->
+  <script src="form.js"></script>
+  <link rel="stylesheet" href="form.css" />
+  <link rel="stylesheet" href="form.js" />
 </head>
 
 <body>
@@ -43,7 +47,7 @@
             </div>
 
 
-            <div id="emessage"></div>
+            <div id="message"></div>
         </div>
         <br>
         <div id="daytime-container">
@@ -63,10 +67,8 @@
         </div>
         <br>
 
-        <div id="submit">
-          <input type="submit" value="sign up" onclick="showAlert()"/>
-
-
+        <div id="openWindowBtn">
+          <input type="submit" id="openWindowBtn" value="sign up" onclick="message()"/>
         </div>
       </div>
       </form>
@@ -134,8 +136,12 @@
     priceList.appendChild(newPriceListItem);
   </script>
 
+  
+  <br />
 
-  <!-- <script src="/form.js" type="module"></script> -->
+ 
+  
+ <script src="form.js" type="module"></script> 
 </body>
 
 </html>

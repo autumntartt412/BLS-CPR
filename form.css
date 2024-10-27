@@ -118,10 +118,7 @@ div#line1:hover h1#b {
 
 }
 
-h2,
-h3,
-p,
-ul {
+h2, h3, p, ul {
     margin: 0%;
     font-weight: bold;
 }
@@ -142,3 +139,37 @@ ul {
     width: 120px;
     color: #fff;
 }
+
+#openWindowBtn {
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 5px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: #004e98;
+    padding-bottom: 8px;
+    padding-top: 10px;
+
+}
+#openWindowBtn:hover {
+    border-color: #09507c;
+    background-color: red;
+  }
+
+
+code {
+    color: #09507c;
+    background: #deedf2;
+    padding: 2px 10px;
+    border-radius: 10px;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 15px;
+  }
+  
+  
+  
