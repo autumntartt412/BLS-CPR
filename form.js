@@ -310,8 +310,29 @@ document
   .getElementById("closeWindowBtn")
   .addEventListener("click", closeWindow);
 
+ 
+ 
+ 
+ 
+  const newH4 = document.createElement('h4');
+  newH4.textContent = 'Saving Lives, One Beat at a Time!';
+  newH4.className = 'h4footer'; 
+  newH4.style.color = 'orange'; 
+  document.body.appendChild('footer');
 
-// new price list item
+  
+  const footer = document.querySelector('footer');
+  
+  if (footer) {
+      footer.appendChild(newH4);
+
+  } else {
+     
+      const newFooter = document.createElement('footer');
+      document.body.appendChild(newFooter);
+      newFooter.appendChild(newH4);
+  }
+
 
 // const priceList = document.getElementById('pricelist');
 // let newPriceListItem = document.createElement('li');
