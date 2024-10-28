@@ -85,7 +85,7 @@ img {
 
 .cards {
     border: 7px solid red;
-    padding-top: 75px;
+    padding-top: 10px;
     position: relative;
     text-align: center;
     transition: all .2s ease-in-out;

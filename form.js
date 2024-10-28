@@ -1,20 +1,22 @@
-import "form.css";
-
- 
-const minlength = 1;
-const maxlength = 50;
+const minLength = 1;
+const maxLength = 20;
 const nameReg = /^[a-zA-Z\s]+$/;
-const emailMinlength = 3;
-const emailMaxlength = 30;
+const emailMinLength = 3;
+const emailMaxLength = 30;
 const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const form = document.getElementById('form');
-const firstName = form.elements['firstname'];
-const lastName = form.elements['lastname'];
-const email = form.elements['email'];
-// const firstName = form.querySelectorAll('firstName').value;
-// const lastName = form.querySelectorAll('lastName').value;
+const formEl = document.getElementById('form');
+// const firstName = form.querySelectorAll['firstname'];
+// const lastName = form.querySelectorAll['lastname'];
+// const email = form.querySelectorAll['email'];
+
+// const firstName = form.name.querySelectorAll('firstname').value;
+// const lastName = form.name('lastname').value;
 // const email = form.querySelectorAll('email').value;
+
+const firstName = formEl.querySelector('input[name="firstname"]').value;
+const lastName = formEl.querySelector('input[name="lastname"]').value;
+const email = formEl.querySelector('input[name="email"]').value;
 
 
 const cardContainerEl = document.selectElementById('cardcontainer');
@@ -61,9 +63,7 @@ for (let i = 0; i < 2; i++) {
     ul.appendChild.createElement('li')
 };
 
-// function showAlert(alert) {
-//     errorAlert = "";
-// }
+
  
 
 
@@ -91,11 +91,11 @@ setTimeout(hideMessage, 5000);
 
 
 
-function isFirstNameValidLength(firstname, minLength, maxLength) {
+function isFirstNameValidLength(firstName, minLength, maxLength) {
 
     // let firstname = "";
 
-            if (firstname.length >= minLength && firstname.length <= maxLength) {
+            if (firstName.length >= minLength && firstName.length <= maxLength) {
                 console.log('First name is valid!');
                 return true;
             } else {
@@ -110,10 +110,10 @@ function isFirstNameValidLength(firstname, minLength, maxLength) {
 
 
 
-function validFirstName(firstname) {
+function validFirstName(firstName) {
     // let firstName = "";
 
-    if (!nameReg.test(firstname)) {
+    if (!nameReg.test(firstName)) {
         
     errorMessage('Please enter a valid first name.');
         return false;
@@ -139,14 +139,14 @@ firstNameEmptySpace("");
 
 
 //last name
-function isLastNameValidLength(lastname, minLength, maxLength) {
+function isLastNameValidLength(lastName, minLength, maxLength) {
     // let lastname = "";
-    if (lastname.length === 0) {
+    if (lastName.length === 0) {
         message(`Your last name must be greater than ${minLength} and less than ${maxLength} characters long.`);
         return false;
     }
 
-    if (lastname.length >= minLength && lastname.length <= maxLength) {
+    if (lastName.length >= minLength && lastName.length <= maxLength) {
         message('Last name is valid!');
         return true;
     } 
@@ -162,9 +162,9 @@ isLastNameValidLength("");
 
 
 
-function validLastName(lastname) {
+function validLastName(lastName) {
     // let lastName = "";
-    if (!nameReg.test(lastname)) {
+    if (!nameReg.test(lastName)) {
         message('Please enter a valid last name.'); 
         return false;
     }
@@ -194,7 +194,7 @@ lastNameEmptySpace("");
 function isEmailValidLength(email, emailMinLength, emailMaxLength) {
     // let email = "";
 
-    if (email.length >= emailMinlength && email.length <= emailMaxlength) {
+    if (email.length >= emailMinLength && email.length <= emailMaxLength) {
         message('Email is valid!');
         return true;
 
@@ -259,6 +259,11 @@ function emailEmptySpace(email) {
 
 emailEmptySpace("");
 
+
+
+
+
+
 //Submit
 
 function validateCprFormOnSubmit(e) {
@@ -269,7 +274,7 @@ function validateCprFormOnSubmit(e) {
 
 }
 
-    form.addEventListener('submit', validateCprFormOnSubmit);
+    formEl.addEventListener('submit', validateLogin);
     e.preventDefault('form');
     console.log('form');
     console.log('Sign up button clicked.');
@@ -286,39 +291,20 @@ formData.forEach((value, key) => {
 });
 
 
-let window;
+const priceList = document.querySelectorAll('pricelist');
+let newPriceListItem = document.createElement('li');
+newPriceListItem.textContent = "First Aid - $50";
+priceList.appendChild(newPriceListItem);
 
-function newWindow() {
-  window = window.open(
-    "file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?firstname=&lastname=&email=",
-    "form",
-    `width=${availW * 0.75}, height=${availH * 0.75}, left=${
-      availW * 0.125
-    }, top=${availH * 0.125}, resizable=yes, scrollbars=yes, location=yes`
-  );
-  window.focus();
-}
-newWindow(window);
 
-function closeWindow() {
-  window.close();
-}
-closeWindow();
+addPriceListItem("First Aid", 50);
 
-document.getElementById("openWindowBtn").addEventListener("click", newWindow);
-document
-  .getElementById("closeWindowBtn")
-  .addEventListener("click", closeWindow);
 
- 
- 
- 
- 
   const newH4 = document.createElement('h4');
   newH4.textContent = 'Saving Lives, One Beat at a Time!';
   newH4.className = 'h4footer'; 
   newH4.style.color = 'orange'; 
-  document.body.appendChild('footer');
+  document.body.appendChild(newH4);
 
   
   const footer = document.querySelector('footer');
@@ -333,8 +319,29 @@ document
       newFooter.appendChild(newH4);
   }
 
+  
 
-// const priceList = document.getElementById('pricelist');
-// let newPriceListItem = document.createElement('li');
-// newPriceListItem.textContent = "First Aid - $50";
-// priceList.appendChild(newPriceListItem);
+// let window;
+
+// function newWindow() {
+//   window = window.open(
+//     "file:///C:/Users/tseh/Documents/Perscholas/SBADomManipulation/form.html?firstname=&lastname=&email=",
+//     "form",
+//     `width=${availW * 0.75}, height=${availH * 0.75}, left=${
+//       availW * 0.125
+//     }, top=${availH * 0.125}, resizable=yes, scrollbars=yes, location=yes`
+//   );
+//   window.focus();
+// }
+// newWindow(window);
+
+// function closeWindow() {
+//   window.close();
+// }
+// closeWindow();
+
+// document.getElementById("openWindowBtn").addEventListener("click", newWindow);
+// document
+//   .getElementById("closeWindowBtn")
+//   .addEventListener("click", closeWindow);
+
