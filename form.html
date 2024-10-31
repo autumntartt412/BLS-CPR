@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SBA Form</title>
-  <script src="./form.js"></script> 
+  <script src="./form.js" defer></script> 
   <link rel="stylesheet" href="form.css" />
 </head>
 
@@ -19,7 +19,6 @@
 <div>
   <header></header>
 </div>
-  <div id="emessage"></div>
   <div id="main">
     <div class="container">
       <div>
@@ -28,14 +27,14 @@
         <!-- <p>Sign Up Form</p> -->
 
         <div id="form-container">
-          <form id="form" style border: blue>
-            <input name="firstname" type="text" placeholder="first name" />
+          <form id="form" style="border: 3px solid red;">
+            <input name="firstname" type="text" placeholder="first name" required />
             <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-            <input name="lastname" type="text" placeholder="last name" />
+            <input name="lastname" type="text" placeholder="last name" required />
             <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
-            <input name="email" type="email" placeholder="www.example.com" />
+            <input name="email" type="email" placeholder="www.example.com" required />
             <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
 
 
@@ -52,29 +51,27 @@
         <br>
         <div id="daytime-container">
           <div class="flex-row">
-            <input id="morning" name="morning" type="radio" value="morning" />
-            <label for="daytime">7a-10a&nbsp;</label>
+            <input id="morning" name="daytime" type="radio" value="morning" />
+            <label for="morning">7a-10a&nbsp;</label>
           </div>
           <div class="flex-row">
-            <input id="afternoon" name="afternoon" type="radio" value="afternoon" />
+            <input id="afternoon" name="daytime" type="radio" value="afternoon" />
             <label for="afternoon">12p-3p&nbsp;</label>
 
           </div>
           <div class="flex-row">
-            <input id="evening" name="evening" type="radio" value="evening" />
+            <input id="evening" name="daytime" type="radio" value="evening" />
             <label for="evening">5p-8p&nbsp;</label>
           </div>
         </div>
         <br>
 
-        <div id="openWindowBtn">
-          <input type="submit" id="openWindowBtn" value="sign up" onclick="message()"/>
+        <div class="openWindowBtn">
+          <input type="submit" value="Sign Up" class="openWindowBtn" onclick="message()"/>
         </div>
       </div>
       </form>
-      <div id="message"></div>
     </div>
-
     <div id="cardcontainer">
       <div class="cards">
         <h2>PGH BLS & CPR</h2>
@@ -132,12 +129,7 @@
   <div>
     <footer></footer>
   </div>
-  <!-- <script type="text/javascript">
-    const priceList = document.getElementById('pricelist');
-    let newPriceListItem = document.createElement('li');
-    newPriceListItem.textContent = "First Aid - $50";
-    priceList.appendChild(newPriceListItem);
-  </script> -->
+ 
   <br />
  
 </body>
