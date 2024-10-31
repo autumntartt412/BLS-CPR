@@ -4,10 +4,10 @@ body {
     height: 1000px;
     background-size: cover; 
     background-position: center; 
-   
-    margin: 0;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    margin: 5px;
 }
-
 
 #container {
     display: flex;
@@ -22,7 +22,7 @@ body {
     margin: 20px;
     width: 1250px;
     height: 150px;
-    padding-right: 60px;
+    padding-right: 50px;
     padding-left: 60px;
 }
 
@@ -148,7 +148,7 @@ ul {
     display: flex;
     justify-content: center;
     background-color: #004e98;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     padding-top: 10px;
 
 }
@@ -175,5 +175,18 @@ code {
     font-weight: bold;
     display: none;
 }
-  
-  
+
+.h4 {
+ padding-top: 10px;
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+    button{
+        width: 150px;
+    }
+}
+
+
