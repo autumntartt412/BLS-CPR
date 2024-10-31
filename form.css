@@ -129,7 +129,7 @@ h2, h3, p, ul {
 ul {
     color: red;
     font-weight: bolder;
-    text-align: left;
+    /* text-align: left; */
 
 }
 

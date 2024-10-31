@@ -10,6 +10,61 @@ const messageEl = document.getElementById('message');
 const formData = new FormData(formEl);
 const data = {};
 
+// footer
+let newH4 = document.createElement('h4');
+newH4.textContent = "Saving Lives One Beat at a Time!";
+newH4.className = 'h4footer';
+newH4.style.color = 'red';
+newH4.style.marginTop = '5px';
+newH4.style.textAlign = 'center';
+newH4.style.fontSize = '30px';
+document.body.appendChild(newH4);
+
+
+const footer = document.querySelector('footer');
+
+if (footer) {
+    footer.appendChild(newH4);
+} else {
+    const newFooter = document.createElement('footer');
+    newFooter.appendChild(newH4);
+    document.body.appendChild(newFooter);
+};
+
+
+
+const cards = document.querySelectorAll('.cards')
+for (let i = 0; i < cards.length; i++) {
+    const li = cards[i].querySelector('li');
+    if (li && li.textContent === "Infant CPR/AED - $50") {
+        const newList = cards[i].querySelectorAll('li');
+        newList.forEach((dogCpr) => {
+            dogCpr.textContent = "Doggy CPR - $50";
+        });
+    }
+}
+
+const listEls = document.querySelectorAll('li');
+listEls.forEach(el => {
+    el.style.fontWeight = 'bold';
+    el.style.textAlign = 'left';
+});
+
+const priceLists = document.querySelectorAll('.pricelist');
+function addPriceListItem(name, price) {
+    let newPriceListItem = document.createElement('li');
+    // newPriceListItem.textContent = "First Aid - $50"; 
+    newPriceListItem.textContent = `${name} - $${price}`;
+    priceLists.forEach(priceList => {
+        priceList.appendChild(newPriceListItem.cloneNode(true));
+        newPriceListItem.style.color = 'red';
+        newPriceListItem.style.fontWeight = 'bold';
+        newPriceListItem.style.textAlign = 'left';
+    });
+};
+
+addPriceListItem("First Aid", 50);
+
 
 const firstName = formEl.querySelector('input[name="firstname"]').value.trim();
 const lastName = formEl.querySelector('input[name="lastname"]').value / trim();
@@ -225,82 +280,3 @@ hideMessage();
 
 // setTimeout(hideMessage, 5000);
 
-
-const priceLists = document.querySelectorAll('.pricelist');
-function addPriceListItem(name, price) {
-    let newPriceListItem = document.createElement('li');
-    // newPriceListItem.textContent = "First Aid - $50"; 
-    newPriceListItem.textContent = `${name} - $${price}`;
-    priceLists.forEach(priceList => {
-        priceList.appendChild(newPriceListItem)
-    });
-};
-
-addPriceListItem("First Aid", 50);
-
-
-const newH4 = document.createElement('h4');
-newH4.textContent = "Saving Lives, One Beat at a Time!";
-newH4.className = 'h4footer';
-newH4.style.color = 'orange';
-//   document.body.appendChild(newH4);
-
-
-const footer = document.querySelector('footer');
-
-if (footer) {
-    footer.appendChild(newH4);
-} else {
-    const newFooter = document.createElement('footer');
-    newFooter.appendChild(newH4);
-    document.body.appendChild(newFooter);
-};
-
-
-const cardContainerEl = document.getElementById('cardcontainer');
-cardContainerEl.style.height = '50%';
-cardContainerEl.style.width = '50%';
-
-
-const navEl = document.getElementById('nav');
-navEl.style.border = '3px solid white';
-navEl.classList.add('flex-around');
-navEl.style.color = 'white';
-
-const priceCards = document.querySelectorAll('.cards');
-priceCards.forEach(card => {
-    card.style.width = '100px';
-    card.style.border = 'var(--text-color)';
-});
-
-const buttonEl = document.getElementById('button');
-buttonEl.style.padding = '30px';
-
-const cards = document.querySelectorAll('.cards')
-for (let i = 0; i < cards.length; i++) {
-    const li = cards[i].querySelector('li');
-    if (li && li.textContent === "Infant CPR/AED - $50") {
-        const newList = cards[i].querySelectorAll('li');
-        newList.forEach((dogCpr) => {
-            dogCpr.textContent = "Doggy CPR - $50";
-        });
-    }
-}
-
-const listEls = document.querySelectorAll('li');
-listEls.forEach(el => {
-    el.style.fontWeight = 'bold';
-    el.style.textAlign = 'left';
-});
-
-
-const newDiv = document.createElement('div');
-const newUl = document.createElement('ul');
-newDiv.appendChild(newUl);
-
-for (let i = 0; i < 2; i++) {
-    const newLi = document.createElement('li');
-    newLi.textContent = `New Item ${i + 1}`;
-    newUl.appendChild(newLi);
-};
-cardContainerEl.appendChild(newDiv);
