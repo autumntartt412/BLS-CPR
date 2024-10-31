@@ -8,10 +8,6 @@ body {
     margin: 0;
 }
 
-#message {
-    display: none;
-    color: red;
-}
 
 #container {
     display: flex;
@@ -42,9 +38,7 @@ label {
     margin-left: 5px;
 }
 
-h1,
-h2,
-p {
+h1, h2, p {
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -174,7 +168,12 @@ code {
   td {
     border: 1px solid black;
     padding: 15px;
+
   }
-  
+  #error-message {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
   
   
